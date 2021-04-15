@@ -4,7 +4,7 @@ import time
 def main():
     print("gpio connection test")
 
-    # Open GPIO0 (GPIO504) with baudrate 115200
+    # Open GPIO0, pin 7 (GPIO504)
     gpio1 = SysfsGPIO(504, "out")
     #gpio2 = SysfsGPIO(444, "out")
 
