@@ -1,22 +1,17 @@
-import serial
-import time
+from periphery import Serial
 
 def main():
-    print("Opening serial port /dev/ttyAMA1 with baudrate 115200")
+    print("uart connection test")
 
-    # open port /dev/ttyAMA1 with baudrate 115200 
-    ser = serial.Serial("/dev/ttyAMA1", 115200)
+    # Open /dev/ttyAMA1 with baudrate 115200
+    ser = Serial("/dev/ttyAMA1", 115200)
 
-    while True:
-        print("Write to UART")
-
-        # write a string  
-        ser.write(b"Hello from Atlas 200 DK\n")
-
-        # read bytes from serial until newline character
-        # this will block until newline character is received
-        readdata = ser.readline().decode('utf-8')
-        print(f'Reply: {readdata}')
+    print("Write to UART")
+    ser.write(b"Hello from Atlas 200 DK\n")
+        
+    # Read up to 32 bytes, with timeout of 2 seconds
+    readdata = ser.read(32, 2).decode('utf-8')
+    print(f'Received reply: {readdata}')
 
 
 if __name__ == "__main__":

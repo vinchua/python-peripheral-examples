@@ -1,5 +1,5 @@
-# sample-uart-python
-Sample program to demonstrate UART connection between Arduino Uno and Atlas 200 DK board using the `pyserial` python library.
+# uart python 
+Sample program to demonstrate UART connection between Arduino Uno and Atlas 200 DK board using the `python-periphery` python library.
 
 ## Prerequisites
 - Atlas 200 DK board, PCB type IT21DMDA
@@ -12,9 +12,10 @@ Sample program to demonstrate UART connection between Arduino Uno and Atlas 200 
 
 ## Run
 1. Upload sketch.ino to Arduino Uno board. Open the serial monitor. 
-2. On the Atlas board, run `python3 uart.py`. If the UART connection works, you will see the following repeated output on the Atlas board terminal:
+2. On the Atlas board, run `python3 uart.py`. If the UART connection works, you will see the following output on the Atlas board terminal:
 
 ```
+uart connection test
 Write to UART
 Reply: Arduino: Hello from Arduino
 
@@ -22,6 +23,4 @@ Reply: Arduino: Hello from Arduino
 4. To close the program, ctrl+c. 
 
 
-## pyserial
-[pyserial](https://pyserial.readthedocs.io/en/latest/) is a python module encapsulates the access for the serial port.
 
