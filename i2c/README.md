@@ -21,7 +21,3 @@ Write to I2C
 Read from I2C: Hello from Arduino
 ```
 
-
-## pyserial
-[pyserial](https://pyserial.readthedocs.io/en/latest/) is a python module encapsulates the access for the serial port.
-
